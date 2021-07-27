@@ -89,6 +89,8 @@ Not only were web servers taken offline by a DDOS attack, but upload and downloa
 
 > Answer: It took the system a total of `9 hours` to recover.  
 
+---
+
 ### Step 2: Are We Vulnerable? 
 
 **Background:**  Due to the frequency of attacks, your manager needs to be sure that sensitive customer data on their servers is not vulnerable. Since Vandalay uses Nessus vulnerability scanners, you have pulled the last 24 hours of scans to see if there are any critical vulnerabilities.
@@ -120,6 +122,8 @@ Not only were web servers taken offline by a DDOS attack, but upload and downloa
 
 ![Database Critical Alert](/Homework/Images/Critical_Database_Server_Vulnerabilities.PNG)
 
+---
+
 ### Step 3: Drawing the (base)line
 
 **Background:**  A Vandaly server is also experiencing brute force attacks into their administrator account. Management would like you to set up monitoring to notify the SOC team if a brute force attack occurs again.
@@ -149,7 +153,6 @@ Not only were web servers taken offline by a DDOS attack, but upload and downloa
 
 ![Brute Force Failed Logins Alert](/Homework/Images/Brute_Force_Failed_Logins.PNG)
  
-
 ---
 
 © 2020 Trilogy Education Services, a 2U, Inc. brand. All Rights Reserved.
