@@ -142,11 +142,11 @@ Not only were web servers taken offline by a DDOS attack, but upload and downloa
       
 3. Determine a baseline of normal activity and a threshold that would alert if a brute force attack is occurring.
 
->> By examining the `'name'` field for `"An account failed to log on"` I was able to determine the time of the attack, the baseline and the threshold...
+> By examining the `'name'` field for `"An account failed to log on"` I was able to determine the time of the attack, the baseline and the threshold...
 
->> The brute force attack occurred from `9:00 a.m. until 2:00 p.m. on 2/21/2020` for a total of `5 hours`.
+> The brute force attack occurred from `9:00 a.m. until 2:00 p.m. on 2/21/2020` for a total of `5 hours`.
 
->> Based on the logs, the the baseline is `5 to 35` logs an hour. The threshold will be set at `40 or more login attempts` in an hour and the alert will be sent to `SOC@vandalay.com` when triggered.
+> Based on the logs, the the baseline is `5 to 35` logs an hour. The threshold will be set at `40 or more login attempts` in an hour and the alert will be sent to `SOC@vandalay.com` when triggered.
 
 > The Query Command:
 
