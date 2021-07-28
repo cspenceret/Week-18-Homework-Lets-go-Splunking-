@@ -70,15 +70,15 @@ Not only were web servers taken offline by a DDOS attack, but upload and downloa
 
 `source="server_speedtest.csv" host="server_speedtest.csv_host" sourcetype="csv" | eval ratio='DOWNLOAD_MEGABITS'/'UPLOAD_MEGABITS'`
 
-![EVAL Image](/Homework/Images/Eval-1.PNG)
+![EVAL Image](/Homework/Images/1_Eval-1.PNG)
 
 > Speed Test Reort:
 
 `source="server_speedtest.csv" host="server_speedtest.csv_host" sourcetype="csv" | eval ratio='DOWNLOAD_MEGABITS'/'UPLOAD_MEGABITS' | sort _time | table _time IP_ADDRESS UPLOAD_MEGABITS DOWNLOAD_MEGABITS ratio`
 
-![Speed Test Image](/Homework/Images/Speed_Report-1.PNG)  
+![Speed Test Image](/Homework/Images/1_Speed_Report-1.PNG)  
 
-![Visualization Downtime](/Homework/Images/Reduced_speed_of_downloads.PNG)
+![Visualization Downtime](/Homework/Images/1_Reduced_speed_of_downloads.PNG)
 
     - Based on the report created, what is the approximate date and time of the attack?
 
@@ -110,17 +110,17 @@ Not only were web servers taken offline by a DDOS attack, but upload and downloa
 
 - `source="nessus_logs.csv" host="nessus_logs_host" dest_ip="10.11.36.23" | eval CRITICAL=IF(severity="critical", "Critical", "Non-Critical") | stats count by CRITICAL`
 
-![Database Critical Query](/Homework/Images/Database_Critical_Alerts.PNG)
+![Database Critical Query](/Homework/Images/2_Database_Critical_Query.PNG)
 
 > It appears that there are 49 critical database server vulnerabilities, and 194 Non-Critical as per the screenshot above (Database_Critical_Alert).  
 
       
 3. Build an alert that monitors every day to see if this server has any critical vulnerabilities. If a vulnerability exists, have an alert emailed to `soc@vandalay.com`.
 
-![Setting an Alert](/Homework/Images/Set_an_alert-1.PNG)
-![Setting an Alert-2](/Homework/Images/Set_an_alert-2.PNG)  
+![Setting an Alert](/Homework/Images/2_Set_an_alert-1.PNG)
+![Setting an Alert-2](/Homework/Images/2_Set_an_alert-2.PNG)  
 
-![Database Critical Alert](/Homework/Images/Critical_Database_Server_Vulnerabilities.PNG)
+![Database Critical Alert](/Homework/Images/2_Critical_Database_Server_Vulnerabilities_Alert.PNG)
 
 ---
 
@@ -142,16 +142,23 @@ Not only were web servers taken offline by a DDOS attack, but upload and downloa
       
 3. Determine a baseline of normal activity and a threshold that would alert if a brute force attack is occurring.
 
+>> By examining the `'name'` field for `"An account failed to log on"` I was able to determine the time of the attack, the baseline and the threshold...
+
+>> The brute force attack occurred from `9:00 a.m. until 2:00 p.m. on 2/21/2020` for a total of `5 hours`.
+
+>> Based on the logs, the the baseline is `5 to 35` logs an hour. The threshold will be set at `40 or more login attempts` in an hour and the alert will be sent to `SOC@vandalay.com` when triggered.
+
 > The Query Command:
 
 `source="Administrator_logs.csv" host="Administrator_logs_host" | stats count by name | sort -count | eval Bruteforce=if(name="An account failed to log on" AND count>5, "Potential Brute Force", "Not Brute Force")`
 
-![Brute Force Failed Logins](/Homework/Images/Failed_Logins_Query.PNG)  
-![Bar Chart Brute Forec Failed Logins](/Homework/Images/Bar_Chart_Failed_Logins_Query.PNG)  
+![Brute Force Failed Logins](/Homework/Images/3_Failed_Logins_Query.PNG)  
+![Bar Chart Brute Forec Failed Logins](/Homework/Images/3_Bar_Chart_Failed_Logins_Query.PNG)  
+![Baseline & Thershold](/Homework/Images/3_Baseline_and_threshold.PNG)
 
 4. Design an alert to check the threshold every hour and email the SOC team at SOC@vandalay.com if triggered. 
 
-![Brute Force Failed Logins Alert](/Homework/Images/Brute_Force_Failed_Logins.PNG)
+![Brute Force Failed Logins Alert](/Homework/Images/3_Brute_Force_Failed_Logins_Alert.PNG)
  
 ---
 
