@@ -169,7 +169,7 @@ Not only were web servers taken offline by a DDOS attack, but upload and downloa
 ## :sunglasses: `Ketan Vithal Patel` :sunglasses:  
 
 
-### `July 12, 2021 -- UofT Cybersecurity - Boot Camp`
+### `Tuesday, July 27, 2021 -- UofT Cybersecurity - Boot Camp`
 #### :rose::rose:`Jai Shri Swaminarayan`:rose::rose:
 ```
 હરે કૃષ્ણ હરે કૃષ્ણ, કૃષ્ણ કૃષ્ણ હરે હરે |  Hare Krishna Hare Krishna, Krishna Krishna Hare Hare |
