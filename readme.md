@@ -123,3 +123,12 @@ In a word document, provide the following:
 ---
 
 © 2020 Trilogy Education Services, a 2U, Inc. brand. All Rights Reserved.
+
+## Week 18 Homework Solution: Lets go Splunking!
+
+Refer to the following solution files for the homework worksheets: 
+
+* [Week 18 Homework Solution: Lets go Splunking!](https://github.com/karma-786/Week-18-Homework-Lets-go-Splunking-/blob/main/Images/Week%2018%20Homework%20Lets%20go%20Splunking!.PNG.md)  
+
+---
+© 2020 Trilogy Education Services, a 2U, Inc. brand. All Rights Reserved.
